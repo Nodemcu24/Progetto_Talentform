@@ -1,0 +1,32 @@
+[
+   {
+     "id":1,
+     "nome":"Lazio",
+     "province":[ "Frosinone", "Viterbo", "Roma"]
+
+   },
+   {
+       "id":2,
+       "nome": "Puglia",
+       "province":[ "Foggia", "Bari", "Lecce"]
+   },
+   {    
+        "id":3,
+        "nome": "Liguria",
+         "province":[ "Genova", "Savona", "Sanremo"]
+   }
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+

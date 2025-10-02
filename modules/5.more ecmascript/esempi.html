@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+  <script>
+
+     /* let varJSON = '{"name":"Francesco", "age":45, "city":"Napoli"}';
+      let conversion = JSON.parse(varJSON);
+
+      console.log(conversion);
+
+      
+   let bk = JSON.stringify(conversion); // Da oggetto a stringa
+
+    console.log(bk);
+
+      async function fetchAPI() {
+        const url =
+          "https://mocki.io/v1/a7833c67-0852-4ba1-8098-a2223b7abdb4";
+        const response = await fetch(url);
+        const resp = await response.json();
+        return resp;
+      }
+      fetchAPI().then(console.log); */
+
+
+
+        //Traccia: Crea un oggetto e trasformalo in stringa JSON.
+
+         let str ={ tipo : "vestito", marca: "nike", prezzo: 100};
+         let st = JSON.stringify(str);
+         console.log(st);
+         
+
+        //Convertire una stringa JSON in oggetto
+
+         let stJson = '{"citta":"Roma"}'
+         let obj = JSON.parse(stJson);
+
+         console.log(obj.citta)
+
+       //Traccia: Trasforma {"citta":"Roma","popolazione":3000000} in un oggetto.
+       
+           const città = { citta: "Roma",
+           popolazione: 3000000
+            };
+          
+            console.log(città);
+
+            //Array di oggetti
+           // Traccia: Trasforma in oggetto la stringa JSON con array di utenti
+            // e mostra il secondo nome
+
+             // Stringa JSON con array di utenti
+            let jsonString = '[{"nome":"Giovanni"},{"nome":"Andrea"},{"nome":"Marco"}]';
+
+            let utenti = JSON.parse(jsonString);
+
+            console.log(utenti[1].nome);
+
+             
+              
+
+
+           // Convertire un array in JSON
+            //Traccia: Trasforma l’array [1,2,3,4] in stringa JSON.
+
+             let array = [ 1,2,3,4];
+             let json = JSON.stringify(array);
+             console.log(json);
+             
+
+
+            // Filtrare dati da JSON
+        //Traccia: Dato un JSON con prodotti, 
+        // mostra solo quelli con prezzo > 50.
+
+         /*  let prodotti = [
+        { nome: "Mouse", prezzo: 10 },
+        { nome: "Tastiera", prezzo: 15 },
+        { nome: "Monitor", prezzo: 100 },
+        { nome: "Cavo USB", prezzo: 9.90 }
+       ];
+
+
+         let prodotti = JSON.parse(jsonString);
+         console.log(prodotti);
+        // let prodottiFiltrati = prodotti.filter((prodotto => prodotto.prezzo > 50))
+       //  console.log(prodottiFiltrati); */
+         
+
+
+        const prodottiJSON = '[{"nome":"pc","prezzo":500},{"nome":"mouse","prezzo":20}]';
+       const prodotti = JSON.parse(prodottiJSON);
+
+
+
+
+
+
+  </script> 
+
+
+
+
+</body>
+</html>

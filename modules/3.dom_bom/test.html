@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="welcome">Benvenuto in HTML</h1>
+  <h1 id="javascript">javascript</h1>
+  <a id="link">Google</a>
+
+  <button onclick="homeclick()">Click</button>
+  <button onclick="ChangeText(this)">Testo cambiato</button>
+
+  <div id="divcolor" style="width:200px; height:100px; background-color:yellow;" ondblclick="mydiv(this)">
+    Doppio clicca qui
+  </div>
+
+  <button onclick="mybutton(this)">Cliccami</button>
+
+  <div id="interval" style="margin-top:20px;"></div>
+  <div id="interval1" style="margin-top:10px;"></div>
+
+  <script>
+    // Modifica stile e contenuto
+    document.getElementById("javascript").innerHTML = "JAVASCRIPT";
+    document.getElementById("javascript").style.cssText = `
+      margin-left: 20%;
+      margin-right: 20%;
+      color: brown;
+      background-color: yellow;
+      text-align: center;
+      font-family: Courier;
+      font-size: 25px;
+    `;
+
+    document.getElementById("welcome").innerHTML = "Benvenuto in JAVASCRIPT";
+    document.getElementById("welcome").style.cssText = `
+      margin-left: 20%;
+      margin-right: 20%;
+      color: brown;
+      background-color: yellow;
+      text-align: center;
+      font-family: Courier;
+      font-size: 25px;
+    `;
+
+    // Link aggiornato
+    document.getElementById("link").setAttribute("href", "https://www.lottomatica.it/");
+    document.getElementById("link").innerHTML = "Lottomatica";
+
+    // Funzioni
+    function homeclick() {
+      alert("Hai cliccato");
+    }
+
+    function ChangeText(btn) {
+      btn.innerText = "Sto cambiando il testo";
+    }
+
+    function mydiv(element) {
+      element.style.background = "red";
+    }
+
+    function mybutton(element) {
+      element.disabled = true;
+      element.innerText = "Bottone disabilitato";
+
+    }
+
+    // Intervalli
+    setInterval(interval, 5000);
+    function interval() {
+      let d = new Date();
+      document.getElementById("interval").innerHTML =
+        d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    }
+
+    setInterval(intervalText, 5000);
+    function intervalText() {
+      document.getElementById("interval1").innerHTML = "Ciao a tutti";
+      document.getElementById("interval1").style.color = "blue";
+    }
+
+    /* //Traccia: Crea una funzione che mostra in console un messaggio dopo 2
+         function mostraMsg(){
+          setTimeout(() => {
+          console.log("hello world");
+        }, 2000);
+
+         }
+
+    //Traccia: Crea una funzione che prende un nome e lo mostra dopo 1 secondo.
+       function  getandShowNome(nome){
+        setTimeout(() => {
+          console.log(nome);
+        }, 1000);
+       }
+   // Traccia: Crea una funzione che conta da 1 a 5 con setInterval.
+    function countFromOneToFive() {
+        let n = 1;
+        setInterval(() => {
+          if (n < 6) {
+            console.log(n);
+          }
+          n++;
+        }, 1000);
+      }
+
+      countFromOneToFive();
+
+
+     // Traccia: Crea una funzione che parte da un numero e fa un conto alla rovescia.
+         function contoAllaRovescia(partenza){
+        let numero = partenza;
+
+        const timer = setInterval(() => {
+            console.log(numero);
+
+            if(numero === 0){
+                clearInterval(timer);
+                console.log("Tempo scaduto. ");
+            }
+
+            numero--;
+        }, 1000);
+      }
+
+      contoAllaRovescia(10);
+     // Traccia: Crea una funzione che alterna tra “ON” e “OFF” ogni 2 secondi.
+       function alterna(){
+        let stato = false;
+
+        setInterval(() => {
+            stato = !stato;
+            console.log(stato ? "ON" : "OFF");
+        }, 2000);
+      }
+
+      alterna();
+
+     // Traccia: Crea una funzione che mostra “Ping” ogni secondo per 3 volte.
+       function mostra(){
+        let count = 0;
+
+        const intervallo = setInterval(() =>{
+            console.log("Ping");
+            count++;
+
+            if(count == 3){
+                clearInterval(intervallo);
+            }
+        } 1000);
+      }
+
+      mostra(); */
+
+     //Traccia: Chiedi all’utente se vuole continuare e 
+     //mostra un messaggio in base alla risposta.
+
+       /*let exit =false;
+      while(!exit){
+      let scelta = prompt("CIAO VUOI CONTINUARE? (SI/NO)");
+      if( scelta == "SI"){
+        alert("OTTIMA SCELTA")
+      } else if ( scelta == "NO"){
+        alert ("ARRIVEDERCI");
+        exit = confirm("SEI SICURO DI VOLER USCIRE?");
+      } else{
+         alert (" RISPOSTA ERRATA");
+      }
+      } */
+
+       /*let exit = false;
+      while (!exit) {
+        let scelta = prompt("CIAO VUOI CONTINUARE? (SI/NO)");
+        if (scelta == "SI") {
+          alert("BRAVO OTTIMA SCELTA");
+        }
+        if (scelta == "NO") {
+          alert("ARRIVERDERCI");
+          exit = confirm("Sei sicuro che vuoi uscire?");
+        } else {
+          alert("RISPOSTA NON CORRETTA");
+        }
+      } */
+       
+      //Traccia: Usa prompt per chiedere il nome e salutarlo.
+       /*let exit = false;
+
+      while (!exit) {
+        let nome = prompt("CIAO COME TI CHIAMI?");
+
+        alert("CIAO " + nome + " BENVENUTO!");
+        let scelta = prompt("CIAO VUOI CONTINUARE? (SI/NO)");
+        if (scelta == "SI") {
+          break;
+        }
+      }
+     
+
+
+      //Traccia: Chiedi una password e controlla se è corretta.
+      
+      let pass = prompt("INSERISCI PASSWORD");
+      if (pass == 1234) {
+        alert("BRAVO PASSWORD CORRETTA");
+      } else {
+        alert("VAI DAL MEDICO");
+      } */
+    
+    
+
+
+
+  </script>
+</body>
+</html>

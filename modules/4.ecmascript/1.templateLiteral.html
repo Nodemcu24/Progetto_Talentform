@@ -8,11 +8,205 @@
   </head>
   <body>
     <script>
-      let javascript = "develop";
-      let development = { develop: "javascript", teacher: "fabio" };
-      let literal = `example template literal ${javascript}   ${development.teacher}`;
-      let backTick = `      esempio backtick  ${javascript}   `;
+      
+      let backend = "database";
+      let frontend = "typescript";
+     let development = { develop: "javascript", teacher: "fabio" };
+      let literal = ` ${development.teacher}`;
+      let fullstack = ` ${backend} ${frontend}`;
+
+      console.log(fullstack);
       console.log(literal);
+
+     
+      let CapoDiAbbigliamento = { marca : "nike", colore : "nero", taglia:"media" }
+
+     let l = `example template l ${ CapoDiAbbigliamento.taglia} ${CapoDiAbbigliamento.marca }`;     
+     console.log(l);
+
+
+     let data =(nome, cognome) => ` ${nome}  ${cognome} `;
+      console.log(data("Massimo","Bianchi"));
+
+      //: Scrivi una funzione che prende due numeri e ritorna la loro somma.
+         
+         /*let somma = (a, b) =>  ` ${a + b}   `;
+        console.log(somma(5,6));
+
+       // Traccia: Scrivi una funzione che riceve
+       //  un numero e stampa se è pari o dispari.
+          
+     let func = (c) => (c % 2 === 0 ? "PARI" : "DISPARI");
+      console.log(func(2)); // Output: PARI
+      console.log(func(5)); // Output: DISPARI
+
+      Dato un array di stringhe, crea un array con la lunghezza di ciascuna parola.*/
+      
+        let str = ["giallo", "rosso", "verde"];
+        let str1= str.map((res1) => res1.length);
+        console.log(str1);
+
+
+
+       // Traccia: Dato un array di numeri, 
+       // restituisci un nuovo array con i valori raddoppiati.
+
+      const arr = [12, 42, 92, 162];
+      const map = arr.map((result) => result * 2);
+      console.log(map);
+      
+        //: Ottieni solo i numeri pari da un array.
+
+         let numeriPari =[ 120, 15, 55, 100, 111];
+         let findPari = numeriPari.filter(( element) => element %2 ==0 );
+         console.log(findPari);
+         
+        //Traccia: Trova solo le parole con più di 5 lettere.
+
+         let parole = [ "cane", "gatto", "lumaca", "orso"];
+         let tr = parole.filter((element) => element.length > 5)
+         console.log(tr);
+
+         // Trova il numero 7 in un array.
+
+         let num = [ 1,2,7,6,5];
+         let ricerca = num.find((numero) => numero ==7);
+         console.log(ricerca);
+
+         // Trova la prima parola che inizia con la lettera "j".
+           
+         let parole1 = ["cane", "gatto", "joker", "elefante", "jackal"];
+
+         let primaParolaConJ = parole1.find(parola => parola.startsWith("j"));
+
+         console.log(primaParolaConJ); 
+ 
+
+         //Trasforma un array di numeri in un array di oggetti {numero: x}.
+
+        /* let number = [1, 2, 3];
+         let chg = number.map((num) => { numero: num})
+         console.log(chg);
+
+         //Traccia: Trova solo gli utenti maggiorenni da un array di oggetti.
+         let users = [
+        { name: "Alice", age: 17 },
+        { name: "Bob", age: 22 },
+        { name: "Charlie", age: 15 },
+        { name: "David", age: 19 },
+       ];
+       let adults = users.filter((user) => user.age >= 18);
+       console.log(adults); */
+
+       /* //Traccia: Trova l’utente con nome “Marta”.
+           let utenti = [
+        { name: "Alice", age: 17 },
+        { name: "Bob", age: 20 },
+        { name: "Marta", age: 15 },
+        { name: "David", age: 19 },
+       ];
+
+        //let trova = utenti.find((a) => ( a.name =="Marta"));
+        //console.log(trova);
+        
+          
+
+         // Traccia: Ottieni solo i nomi degli utenti.
+         
+        let nomiUtenti = utenti.map(utente => utente.name);
+        console.log(nomiUtenti); 
+
+
+       // Traccia: Ottieni solo i numeri > 10.
+
+        let numeri = [ 30,50,5,4,1];
+        let Maggiori = numeri.filter( a => a > 10);
+        console.log(Maggiori);
+
+
+       //Usare find su array di oggetti complesso
+       //  Traccia: Trova il prodotto con prezzo = 100.
+ 
+
+   let prodotti = [
+   {
+     nomeProdotto: "pizza",
+     prezzo: 15.0,
+   },
+   {
+    nomeProdotto: "computer msi",
+    prezzo: 100,
+   },
+] ;
+
+ prodotti
+  .filter((prodotto) => {
+    return prodotto.prezzo == 100;
+  })
+  .map((filtrato) => {
+    console.log(filtrato);
+  });
+
+
+
+      //Creare array di stringhe maiuscole
+     // Traccia: Converti tutte le parole in maiuscolo con map.
+         let stringhe = [ "primo", "ottavo", "centesimo"];
+         stringhe.map((stringa) =>{
+          console.log(stringa.toUpperCase())
+         })
+
+
+      // Filtrare numeri negativi
+      //  Traccia: Ottieni solo i numeri negativi.
+          let number =[ -2, -5, 2, 1];
+           number.filter((numero) =>{
+             if ( numero < 0) {
+              return numero;
+             }
+           }).map((numeroFiltrato) => {
+          console.log(numeroFiltrato);
+           });
+
+
+       // Usare insieme map e filter
+       //Traccia: Da un array di numeri, raddoppia solo quelli dispari.
+        let interi = [1,2,3,4];
+        interi.filter ( n=>{
+          if (n %2 !=0){
+            return n
+          }
+        }).map((m) => {
+         const t = m * 2;
+        console.log(t);
+       }); */
+
+        // spreadArray
+        // Ricordiamoci di usare i 3 punti che funzionano come operator
+
+         let numeri = [ 1, 3, 5, 6, 7, 8, 1, 2, 6];
+         let nomi = [ "c", "c", "a", "a", "b", "b"];
+        
+         let array =[...numeri, ...nomi];
+         console.log(array);
+         
+
+      
+
+
+
+
+
+
+
+
+
+         
+
+
+    </script>
+
+
     </script>
   </body>
 </html>
