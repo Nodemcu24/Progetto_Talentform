@@ -4,9 +4,13 @@ const DaughterComponent = () => {
   return (
       <div>
           
-       <h1>Le mie informazioni verranno passate al componente Son</h1>
+       <h1 style ={{ textAlign: 'center'}}>
+        
+        benvenuto nel mondo react!
 
-         <p>Benvenuti al corso di Web Developer!</p>
+       </h1>
+
+      
 
     </div>
   )

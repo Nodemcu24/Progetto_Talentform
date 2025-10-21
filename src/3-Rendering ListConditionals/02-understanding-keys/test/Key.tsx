@@ -1,5 +1,5 @@
 import React from "react";
-const Car:React.FC<{brand:string}>=(props)=> {
+const Car:React.FC<{brand:string, prodotto:string,}>=(props)=> {
     return <li>I am a { props.brand }</li>;
   }
 

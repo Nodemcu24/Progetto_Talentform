@@ -8,6 +8,7 @@ const UseEffect = () => {
       setCount((count) => count + 1);
     }, 1000);
   }, [count]);
+  
 
   return <div>UseEffect{count}</div>;
 };

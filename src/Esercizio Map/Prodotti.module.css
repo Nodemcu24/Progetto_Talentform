@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f0f0f0; /* Cambia il colore come preferisci */
+    padding: 20px;
+}
+
+.prodotti {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    background-color: white; /* Colore interno del singolo prodotto */
+}
